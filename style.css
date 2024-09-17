@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.main {
+    width: 100%;
+    background-image: url(banner.jpg);
+    background-position: center center; /* Centers the image */
+    background-size: cover; /* Ensures the image covers the entire area without being distorted */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 3s ease forwards;
+}
+ @keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fully visible */
+         transform: translateY(0); 
+    }
+} 
+
+.logo {
+    width: 15% !important;
+}
+
+.box-one {
+    margin-top: 15%;
+}
+
+.head-one {
+    margin-top: 5% !important;
+}
+
+h1 {
+    font-size: 3rem;
+    color: orange;
+}
+
+h3 {
+    color: orange;
+}
+
+.para {
+    margin-top: 10%;
+}
+
+p {
+    color: grey;
+}
+
+.btn-one {
+    background-color: orange;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.btn-one:hover {
+    background-color: black;
+    color: orange;
+}
+
+#recipes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+} */
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 5px; /* Adds space between cards */
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+}
+
+/* Styles for the container that holds the cards */
+#recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Ensures space between cards */
+    gap: 10px; /* Controls the gap between the cards */
+}
+
+/* Card image styling */
+.card img {
+    width: 100% !important;
+    height: 300px;
+    object-fit: cover;
+}
+#logo{
+    width:50%;
+}
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .box-one {
+        margin-top: 10%;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .para {
+        margin-top: 5%;
+    }
+    .btn-one {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+   #circle{
+    margin-right: 5%;
+   }
+   #logo{
+    width:100%;
+}
+        
+    }
+
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .para {
+        margin-top: 5%;
+    }
+    .btn-one {
+        margin-top: 5%;
+        font-size: 0.8rem;
+        padding: 6px 16px;
+    }
+    #circle{
+        margin-right: 5%;
+       }
+       #logo{
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 472px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    .para {
+        margin-top: 5%;
+    }
+    .btn-one {
+        margin-top: 5%;
+        font-size: 0.75rem;
+        padding: 5px 15px;
+    }
+    #circle{
+        margin: 0% 10% 0% 0%;
+    }
+    #recipes{
+        margin-right: 30px !important;
+    }
+    #logo{
+        width:100%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .col-lg-3 {
+        flex-basis: 23%; /* For large screens, four cards in a row */
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .col-md-4 {
+        flex-basis: 31%; /* For medium screens, three cards in a row */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .col-sm-12 {
+        flex-basis: 100%; /* For small screens, one card per row */
+    }
+}
