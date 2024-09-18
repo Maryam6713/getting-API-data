@@ -14,7 +14,9 @@ body{
     background-size: cover; /* Ensures the image covers the entire area without being distorted */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* .main {
