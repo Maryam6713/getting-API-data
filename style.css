@@ -7,17 +7,25 @@
     font-family: "Poppins", sans-serif;
 }
 
-
-
-.main {
+body{
     width: 100%;
     background-image: url(banner.jpg);
     background-position: center center; /* Centers the image */
     background-size: cover; /* Ensures the image covers the entire area without being distorted */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    overflow: hidden;
+    
 }
+
+/* .main {
+    width: 100%;
+    background-image: url(banner.jpg);
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    overflow: hidden;
+}  */
 
 .animate {
     opacity: 0;
