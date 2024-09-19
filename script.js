@@ -46,8 +46,8 @@ function displayRecipes() {
                 containerRecipes.innerHTML += card;
             });
         })
-        .catch(error => console.error('Error fetching recipes:', error));
+        .catch(error =>
+             console.error('Error fetching recipes:', error));
 }
-
 
 displayRecipes();
