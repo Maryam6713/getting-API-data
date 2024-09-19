@@ -14,7 +14,7 @@ var images = [
 var currentImageIndex = 0;
 
 // -------------Get the image element
-const imageElement = document.getElementById('circle');
+var imageElement = document.getElementById('circle');
 
 //------------ Add click event listener to the image
 imageElement.addEventListener('click', function() {
