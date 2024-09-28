@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipes App</title>
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -18,37 +18,65 @@
             <div class="container-fluid">
               <span class="navbar-brand mb-0 h1"><div id="logo"><img src="logo1.png" alt="" class="img-fluid w-25 animate"></div></span>
             </div>
-          </nav>
+        </nav>
            <!-- -----------navbar end------------- -->
+           
+           <!-- --------- Animated Images Start ----------- -->
+           <section class="image-gallery">
+                <div class="image-box">
+                    <img src="onions.png" alt="Image 1">
+                </div>
+                <div class="image-box">
+                    <img src="tomato.png" alt="Image 2">
+                </div>
+                <div class="image-box">
+                    <img src="Chilli-Pepper.png" alt="Image 3">
+                </div>
+                <div class="image-box">
+                    <img src="knife.webp" alt="Image 4">
+                </div>
+                <div class="image-box">
+                    <img src="cocumber.webp" alt="Image 5">
+                </div>
+            </section>
+           <!-- --------- Animated Images End ----------- -->
+
            <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-5 box-one">
-                       <div class="text-center  head-one mb-5"> <h1 class="animate">Aj Kiya Pakana Hai?</h1></div>
-                        <div class="para text-center mb-5 animate"><p>Discover a world of flavors with our diverse collection of recipes. From traditional dishes to modern fusion, we’ve got something for every taste. Whether you’re a seasoned chef or just starting out, our easy-to-follow recipes will inspire your next meal. Explore, cook, and enjoy delicious dishes right from your kitchen!</p></div>
+                       <div class="text-center head-one mb-5"> 
+                          <h1 class="animate">Aj Kiya Pakana Hai?</h1>
+                       </div>
+                        <div class="para text-center mb-5 animate">
+                            <p>Discover a world of flavors with our diverse collection of recipes. From traditional dishes to modern fusion, we’ve got something for every taste. Whether you’re a seasoned chef or just starting out, our easy-to-follow recipes will inspire your next meal. Explore, cook, and enjoy delicious dishes right from your kitchen!</p>
+                        </div>
                         <div class="text-center animate">
                             <button type="button" class="btn btn-one " onclick="scrollToRecipes()">Check menu</button>
                         </div>
-                       
                     </div>
-                    <div class="col-12 col-lg-6 col-md-12 col-sm-12  box-two text-center mt-5">
-                        <img src="food2.png" alt="" class="img-fluid w-100 animate" id="circle">
+
+                    <div class="col-12 col-lg-6 col-md-12 col-sm-12 box-two text-center mt-5">
+                        <img src="food3.png" alt="" class="img-fluid w-100 animate" id="circle">
                     </div>
                 </div>
             </div>
-
           </div>
-        <div class="recipes-box container mt-5"  id="recipes-section">
+
+        <div class="recipes-box container mt-5" id="recipes-section">
             <h1 class="text-center animate">Our Recipes</h1>
             <div id="recipes" class="animate"></div>
         </div>
+        
+        <div class="my-info mt-3">
+            <div class="container-fluid text-center">
+              <h4>Developed By Maryam Amir</h4>
+              <p>maryammalik6713@gmail.com</p>
+            </div>
+        </div>
     </div>
-
-   
 
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-
-
 </html>

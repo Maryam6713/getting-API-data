@@ -10,24 +10,41 @@
 body{
     width: 100%;
     background-image: url(banner.jpg);
-    background-position: center center; /* Centers the image */
-    background-size: cover; /* Ensures the image covers the entire area without being distorted */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-/* .main {
-    width: 100%;
-    background-image: url(banner.jpg);
     background-position: center center; 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    overflow: hidden;
-}  */
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600; 
+    border-radius: 10px;
+    border: 2px solid; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Scrollbar hover animation */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff9500; 
+    transform: scale(1.2); 
+    box-shadow: 0px 0px 10px 2px #ff6600; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
 
 .animate {
     opacity: 0;
@@ -36,7 +53,7 @@ body{
 }
  @keyframes fadeInUp {
     to {
-        opacity: 1; /* Fully visible */
+        opacity: 1; 
           transform: translateY(0); 
     }
 }  
@@ -86,24 +103,72 @@ p {
     display: flex;
     flex-wrap: wrap;
 }
+/* ==============image section animation=============== */
+.image-gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    z-index: -1; 
+}
 
+/* Image Box styling with random positions */
+.image-box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    filter: blur(1px); 
+    opacity: 0; 
+}
 
-/* .card {
-    border: 1px solid #ddd;
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-} */
+}
+
+/* Left to right animation */
+.image-box.animate-left {
+    animation: slideFromLeft 2s forwards ease-out;
+}
+
+.image-box.animate-right {
+    animation: slideFromRight 2s forwards ease-out;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-900px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(900px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ==============image section animation end=============== */
+
 .card {
     display: flex;
     flex-direction: column;
-    margin: 5px; /* Adds space between cards */
+    margin: 5px; 
     background-color: rgba(0, 0, 0, 0.808);
     color: white;
 }
@@ -112,10 +177,9 @@ p {
 #recipes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly; /* Ensures space between cards */
-    gap: 10px; /* Controls the gap between the cards */
+    justify-content: space-evenly; 
+    gap: 10px; 
 }
-
 /* Card image styling */
 .card img {
     width: 100% !important;
@@ -124,6 +188,38 @@ p {
 }
 #logo{
     width:50%;
+}
+#circle{
+    animation: rotateIn 2s ease forwards;
+}
+
+@keyframes rotateIn {
+    0% {
+        transform: translateX(100vw) rotate(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+.card-body {
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-body {
+    opacity: 0.9;
+    transform: scale(1.08);
+}
+.my-info{
+    width: 100%;
+    background-color: #ff9500;
+}
+
+
+.modal-backdrop.show {
+    opacity: 0.8;
+    backdrop-filter: blur(10px); 
 }
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
@@ -196,18 +292,18 @@ p {
 
 @media screen and (min-width: 992px) {
     .col-lg-3 {
-        flex-basis: 23%; /* For large screens, four cards in a row */
+        flex-basis: 23%; 
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .col-md-4 {
-        flex-basis: 31%; /* For medium screens, three cards in a row */
+        flex-basis: 31%; 
     }
 }
 
 @media screen and (max-width: 767px) {
     .col-sm-12 {
-        flex-basis: 100%; /* For small screens, one card per row */
+        flex-basis: 100%; 
     }
 }
