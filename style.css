@@ -11,15 +11,14 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    
-}
-.main{
      background-image: url(banner.jpg);
     background-position: center center; 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
+    
 }
+
 
 /* Custom scrollbar styling */
 ::-webkit-scrollbar {
