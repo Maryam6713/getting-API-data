@@ -19,7 +19,8 @@ body{
  
     
 }
-
+.main{
+     background: black; 
 
 /* Custom scrollbar styling */
 ::-webkit-scrollbar {
